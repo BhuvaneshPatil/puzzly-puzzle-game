@@ -119,6 +119,7 @@ export default function Home() {
 			setScore(score + 10);
 			if (currentLevel === 5) {
 				setConfetti(true);
+				setTimeRemaining(10000);
 				onOpen();
 			} else if (currentLevel < 5) {
 				changeLevelHandle(currentLevel + 1);

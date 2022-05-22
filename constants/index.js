@@ -32,8 +32,8 @@ export const LEVELCONFIG = {
 		time: 15,
 		wordLength: 3,
 		gridConfig: {
-			rows: 5,
-			columns: 5,
+			rows: 3,
+			columns: 3,
 		},
 	},
 	2: {

@@ -18,7 +18,6 @@ const WordDisaply = ({ word, indexToHide }) => {
 			textTransform="uppercase"
 		>
 			{displayWord.toUpperCase()}
-			{word}
 		</Heading>
 	);
 };
