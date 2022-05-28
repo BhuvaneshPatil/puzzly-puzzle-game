@@ -18,7 +18,7 @@ const Timer = ({ time, totalTime }) => {
 		<Text
 			color={"white"}
 			animation={`${anim} 1s infinite alternate`}
-			fontSize="3xl"
+			fontSize="2xl"
 			fontWeight="bold"
 			letterSpacing="2px"
 		>{`${("0" + s).slice(-2)}:${("0" + ms).slice(-2)}`}</Text>

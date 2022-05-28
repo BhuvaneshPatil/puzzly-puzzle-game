@@ -1,5 +1,4 @@
 import { Heading } from "@chakra-ui/react";
-import { useEffect } from "react";
 
 const WordDisaply = ({ word, indexToHide }) => {
 	let displayWord = "";
@@ -14,7 +13,7 @@ const WordDisaply = ({ word, indexToHide }) => {
 		<Heading
 			color={"gray.200"}
 			letterSpacing="15px"
-			fontSize="6xl"
+			fontSize="4xl"
 			textTransform="uppercase"
 		>
 			{displayWord.toUpperCase()}

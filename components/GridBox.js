@@ -13,8 +13,8 @@ const GridBox = ({
 	};
 	return (
 		<Box
-			width={"60px"}
-			height={"60px"}
+			width={"50px"}
+			height={"50px"}
 			display="flex"
 			alignItems={"center"}
 			justifyContent="center"
@@ -22,7 +22,7 @@ const GridBox = ({
 			color="white"
 			bgColor={isSelected ? "orange.400" : "green.400"}
 			transform={isSelected ? "scale(1.1)" : "scale(1)"}
-			fontSize={"2xl"}
+			fontSize={"large"}
 			fontWeight="bold"
 			margin={0}
 			transition="all 0.3s ease"

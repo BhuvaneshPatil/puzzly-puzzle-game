@@ -3,7 +3,6 @@ import {
 	Button,
 	Flex,
 	Heading,
-	Text,
 	useToast,
 	Modal,
 	ModalOverlay,
@@ -69,7 +68,7 @@ export default function Home() {
 				setTimeRemaining((current) => current - 1);
 				if (timeRemaining < 0) {
 					clearInterval(interval);
-					showReset(true);
+					setShowReset(true);
 				}
 			}, 1);
 		}
@@ -151,14 +150,15 @@ export default function Home() {
 				color="green.200"
 				fontSize="5xl"
 				textAlign="center"
-				p="2rem"
+				lineHeight="15vh"
+				h="15vh"
 			>
 				Puzzly
 			</Heading>
 			{currentRandomIndex !== null && currentLevel ? (
 				<Flex
 					width="60%"
-					height="80vh"
+					height="83vh"
 					borderRadius="3xl"
 					borderColor="green.200"
 					borderWidth="4px"
@@ -179,12 +179,12 @@ export default function Home() {
 					/>
 					{/* display current level */}
 					<Box pos="absolute" right={8} top={5}>
-						<Heading fontSize={"2xl"} color="whiteAlpha.600">
+						<Heading fontSize={"large"} color="whiteAlpha.600">
 							{`Level : ${currentLevel}/5`}
 						</Heading>
 					</Box>
 					<Box pos="absolute" left={8} top={5}>
-						<Heading fontSize={"2xl"} color="whiteAlpha.600">
+						<Heading fontSize={"large"} color="whiteAlpha.600">
 							{`Score : ${score}`}
 						</Heading>
 					</Box>
@@ -201,14 +201,14 @@ export default function Home() {
 						selectedLetter={selectedLetter}
 						currentWord={currentWord}
 					/>
-					<Flex mt="1rem" gap={3}>
+					<Flex gap={3} mt="auto">
 						{showReset ? (
 							<Button
 								rightIcon={<ArrowForwardIcon />}
 								colorScheme="red"
 								marginTop="auto"
 								variant={"outline"}
-								size="lg"
+								size="md"
 								onClick={gameReset}
 							>
 								Reset
@@ -219,7 +219,7 @@ export default function Home() {
 							colorScheme="green"
 							marginTop="auto"
 							variant={"outline"}
-							size="lg"
+							size="md"
 							disabled={!canSubmit}
 							onClick={handleSubmit}
 						>
